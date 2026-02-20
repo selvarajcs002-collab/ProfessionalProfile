@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "20"
+
+cache:
+  npm: true
+
+before_install:
+  - npm install -g @angular/cli
+
+install:
+  - npm install
+
+script:
+  - npm run build
+
+notifications:
+  email: false
