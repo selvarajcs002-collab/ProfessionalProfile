@@ -45,8 +45,8 @@ import { CommonModule } from '@angular/common';
 })
 export class Suppliers {
   suppliers = [
-    'Madura Coats',
-    'Vardhaman Threads',
+    'TECHNO SPORTWEAR PVT LTD',
+    'KKP FINE LINEN PVT LTD',
     'Marathon Embroidery',
     'Madeira India',
     'Amsura Backings',

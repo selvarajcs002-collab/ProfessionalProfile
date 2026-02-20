@@ -38,7 +38,8 @@ import { CommonModule } from '@angular/common';
 })
 export class Testimonials {
   testimonials = [
-    { quote: 'We have been working with this embroidery team for years, and their 15+ years of industry experience truly shows. The stitch quality is consistently excellent, and they always deliver on time, even for bulk orders. Their commitment to precision and punctuality is highly commendable.', name: 'PethuRaj', role: 'Director' },
-    { quote: 'Their experience in the embroidery field is clearly reflected in the flawless finishing of every piece. They maintain strict quality checks and never compromise on delivery timelines. It’s rare to find such reliability and consistency in bulk production.', name: 'Murugan G', role: 'Director' }
+    { quote: 'Their experience in the embroidery field is clearly reflected in the flawless finishing of every piece. They maintain strict quality checks and never compromise on delivery timelines. It’s rare to find such reliability and consistency in bulk production.', name: 'Murugan G', role: 'Director' },
+    { quote: 'We have been working with this embroidery team for years, and their 15+ years of industry experience truly shows. The stitch quality is consistently excellent, and they always deliver on time, even for bulk orders. Their commitment to precision and punctuality is highly commendable.', name: 'PethuRaj', role: 'Director' }
+
   ];
 }

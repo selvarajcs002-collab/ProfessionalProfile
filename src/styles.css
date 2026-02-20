@@ -15,3 +15,130 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
+
+@media print {
+  /* Data-Only Print Optimization */
+
+  /* Strip all colors and visuals for ink efficiency */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: economy !important;
+    print-color-adjust: economy !important;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 8pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Restore images with medium constraints */
+  img {
+    display: block !important;
+    max-width: 300px !important;
+    max-height: 250px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 1px solid #eee !important;
+    margin: 10px 0 !important;
+  }
+
+  /* Hide icons, backgrounds, and interactive elements */
+  video,
+  svg,
+  app-navbar,
+  .no-print,
+  button,
+  a[href^="#"],
+  [style*="background-image"],
+  .absolute,
+  .blur-3xl {
+    display: none !important;
+  }
+
+  /* Structural Cleanliness */
+  .min-h-screen {
+    min-height: auto !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  section {
+    padding: 0.25rem 0 !important;
+    margin: 0.25rem 0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Typography for readability */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: serif !important;
+    font-weight: bold !important;
+    margin-bottom: 0.3rem !important;
+    page-break-after: avoid;
+  }
+
+  h1 {
+    font-size: 16pt !important;
+  }
+
+  h2 {
+    font-size: 13pt !important;
+  }
+
+  h3 {
+    font-size: 11pt !important;
+  }
+
+  /* Multi-column layout restoration for data density */
+  .grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .flex {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .max-w-7xl,
+  .container {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Visible links (optional, can hide if only data is needed) */
+  a:after {
+    content: " (" attr(href) ")";
+    font-size: 7pt;
+  }
+
+  /* Prevent cutting off blocks of text */
+  p,
+  div,
+  li {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 1cm;
+    size: A4;
+  }
+}
