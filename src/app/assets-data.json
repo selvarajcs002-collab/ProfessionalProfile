@@ -1,0 +1,33 @@
+{
+    "hero": {
+        "image": "/images/image1.png"
+    },
+    "overview": {
+        "image": "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=1000&auto=format&fit=crop"
+    },
+    "infrastructure": {
+        "images": [
+            "https://images.unsplash.com/photo-1558238211-c44f24300977?q=80&w=1000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1613501708817-640107779f42?q=80&w=1000&auto=format&fit=crop"
+        ]
+    },
+    "portfolio": {
+        "items": [
+            {
+                "title": "Corporate Branding",
+                "category": "Uniforms",
+                "img": "https://images.unsplash.com/photo-1583209814683-c023dd293cc6?q=80&w=1000"
+            },
+            {
+                "title": "Premium Polo Logs",
+                "category": "Apparel",
+                "img": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000"
+            },
+            {
+                "title": "Custom Jacket Patch",
+                "category": "Fashion",
+                "img": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000"
+            }
+        ]
+    }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import assetsData from '../../assets-data.json';
 
 @Component({
   selector: 'app-hero',
@@ -45,7 +46,7 @@ import { Component } from '@angular/core';
           
           <div class="relative hidden md:block">
             <div class="aspect-square bg-gradient-to-tr from-[#d4af37]/20 to-transparent p-1 rounded-2xl">
-              <img src="/images/image1.png" 
+              <img [src]="assetsData.hero.image" 
                    alt="Embroidery Machine" 
                    class="w-full h-full object-cover rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
             </div>
@@ -67,4 +68,6 @@ import { Component } from '@angular/core';
   `,
   styles: [],
 })
-export class Hero { }
+export class Hero {
+  protected readonly assetsData = assetsData;
+}

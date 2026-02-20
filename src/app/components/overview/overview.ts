@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import assetsData from '../../assets-data.json';
 
 @Component({
   selector: 'app-overview',
@@ -10,7 +11,7 @@ import { Component } from '@angular/core';
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div class="relative">
             <div class="border-2 border-[#d4af37] p-4 rounded-2xl">
-               <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=1000&auto=format&fit=crop" 
+               <img [src]="assetsData.overview.image" 
                     alt="Company Overview" 
                     class="rounded-xl grayscale hover:grayscale-0 transition-all duration-700">
             </div>
@@ -46,4 +47,6 @@ import { Component } from '@angular/core';
   `,
   styles: [],
 })
-export class Overview { }
+export class Overview {
+  protected readonly assetsData = assetsData;
+}

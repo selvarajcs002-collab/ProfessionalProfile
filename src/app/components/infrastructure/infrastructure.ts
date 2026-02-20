@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import assetsData from '../../assets-data.json';
 
 @Component({
   selector: 'app-infrastructure',
@@ -57,8 +58,8 @@ import { Component } from '@angular/core';
             </ul>
           </div>
           <div class="grid grid-cols-2 gap-4">
-             <img src="https://images.unsplash.com/photo-1558238211-c44f24300977?q=80&w=1000&auto=format&fit=crop" class="rounded-2xl h-48 w-full object-cover">
-             <img src="https://images.unsplash.com/photo-1613501708817-640107779f42?q=80&w=1000&auto=format&fit=crop" class="rounded-2xl h-48 w-full object-cover">
+             <img [src]="assetsData.infrastructure.images[0]" class="rounded-2xl h-48 w-full object-cover">
+             <img [src]="assetsData.infrastructure.images[1]" class="rounded-2xl h-48 w-full object-cover">
           </div>
         </div>
       </div>
@@ -66,4 +67,6 @@ import { Component } from '@angular/core';
   `,
   styles: [],
 })
-export class Infrastructure { }
+export class Infrastructure {
+  protected readonly assetsData = assetsData;
+}

@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import printData from './print-data.json';
 import { Navbar } from './components/navbar/navbar';
 import { Hero } from './components/hero/hero';
 import { Overview } from './components/overview/overview';
@@ -17,6 +19,7 @@ import { Contact } from './components/contact/contact';
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
     RouterOutlet,
     Navbar,
     Hero,
@@ -36,4 +39,5 @@ import { Contact } from './components/contact/contact';
 })
 export class App {
   protected readonly title = signal('ssproject');
+  protected readonly printData = printData;
 }

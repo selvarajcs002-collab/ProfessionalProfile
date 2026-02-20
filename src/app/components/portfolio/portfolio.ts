@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import assetsData from '../../assets-data.json';
 
 @Component({
   selector: 'app-portfolio',
@@ -39,9 +40,5 @@ import { CommonModule } from '@angular/common';
   styles: [],
 })
 export class Portfolio {
-  items = [
-    { title: 'Corporate Branding', category: 'Uniforms', img: 'https://images.unsplash.com/photo-1583209814683-c023dd293cc6?q=80&w=1000' },
-    { title: 'Premium Polo Logs', category: 'Apparel', img: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000' },
-    { title: 'Custom Jacket Patch', category: 'Fashion', img: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000' }
-  ];
+  items = assetsData.portfolio.items;
 }
